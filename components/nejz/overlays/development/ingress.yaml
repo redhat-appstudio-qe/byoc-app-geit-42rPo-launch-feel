@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: nejz
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nejz
+    app.kubernetes.io/part-of: byoc-app-geit
+  name: nejz
+spec:
+  rules:
+  - host: nejz-byoc-afqs-tenant.apps.1581a35d2d18940ba3fe.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: nejz
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

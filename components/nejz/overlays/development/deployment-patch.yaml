@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nejz
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-afqs-tenant/byoc-app-geit/nejz@sha256:df3ba6d47d08c2c49e5d7ce57b238f1f55c18923d80f890385cdb5acf42cc995
+        name: my-java-quarkus
+        resources: {}
+status: {}
