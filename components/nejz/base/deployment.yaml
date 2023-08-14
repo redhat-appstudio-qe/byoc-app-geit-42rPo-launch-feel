@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: nejz
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-afqs-tenant/byoc-app-geit/nejz@sha256:df3ba6d47d08c2c49e5d7ce57b238f1f55c18923d80f890385cdb5acf42cc995
         name: my-java-quarkus
         ports:
         - containerPort: 8081
